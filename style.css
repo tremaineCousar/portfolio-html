@@ -147,29 +147,33 @@ a:hover {
 
 section {
 	padding-top: 4vh;
-	height: 96vh;
+	height: fit-content;
 	margin: 0 10rem;
 	box-sizing: border-box;
 	min-height: fit-content;
 }
-
+/* 
 .section-container,
 #profile {
-	display: flex;
-}
+	display: f;
+} */
 
 /* profile section */
 #profile {
 	justify-content: center;
 	gap: 5rem;
-	height: 80vh;
+	height: 100%;
+	position: relative;
 }
 
 .section__pic-container {
-	display: flex;
-	height: 400px;
-	width: 400px;
-	margin: auto 0;
+	display: flex; /* Establishes this container as a flex container */
+	justify-content: center; /* Centers content horizontally */
+	align-items: center; /* Centers content vertically */
+	flex-wrap: wrap; /* Allows items to wrap as needed */
+	height: 400px; /* Fixed height */
+	margin: auto; /* Centers the container itself if it's in a flex parent or a block layout */
+	align-content: center; /* Aligns container's lines within when there is extra space in the cross-axis */
 }
 
 .profilepic {
@@ -275,6 +279,7 @@ section {
 	width: 400px;
 	object-fit: cover;
 	border-radius: 2rem;
+	justify-self: center;
 }
 
 /* About Section */
@@ -320,14 +325,14 @@ section {
 
 .section-container {
 	gap: 4rem;
-	height: 80%;
+	height: 100%;
 }
 
-.section__pic-container {
+/* .section__pic-container {
 	height: 400px;
 	width: 400px;
 	margin: auto 0;
-}
+} */
 
 /* Experience Section */
 #experience {
